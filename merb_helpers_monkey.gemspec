@@ -1,6 +1,6 @@
 #!/usr/bin/ruby
 
-require 'rubygems'
+require 'rubygems' unless defined?(Gem)
 
 spec = Gem::Specification.new do |s|
   ## package information
@@ -20,9 +20,10 @@ spec = Gem::Specification.new do |s|
   END
 
   ## files
-  files = []
-  files += Dir.glob('lib/**/*')
-  files += %w[README.txt MIT-LICENSE]
+  files = %w[README.txt MIT-LICENSE lib/merb_helpers_monkey.rb]
+  #files = []
+  #files += Dir.glob('lib/**/*')
+  #files += %w[README.txt MIT-LICENSE]
   s.files       = files
 end
 
@@ -39,3 +40,5 @@ if $0 == __FILE__
   #Gem::manage_gems
   Gem::Builder.new(spec).build
 end
+
+spec
