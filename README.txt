@@ -16,7 +16,7 @@ Install
 =======
 
   ### install gem
-  $ sudo gem install merb_helpers_monkey --source=http://gems.github.com
+  $ sudo gem install merb_helpers_monkey
   ## add 'dependency "merb_helpers_monkey"
   $ vi config/dependencies.rb
 
